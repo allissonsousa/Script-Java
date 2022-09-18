@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            height: 100vh;
+            display: grid;
+            place-items: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Voce é Brasileiro?</h1>
+    <label for="country">País de Origem</label>
+    <input type="text" id="country">
+    <input type="button" value="Conferir" onclick="nacional()">
+    <div id="resultado"></div>
+    <script>
+        function nacional() {
+            var pais = document.getElementById('country').value
+            var result = document.getElementById('resultado')
+            if ( pais == 'Brasil') {
+                result.innerHTML = 'Você é Brasileiro'
+            } else {
+                result.innerHTML = 'Você é Estrangeiro'
+            }
+        }
+    </script>
+</body>
+</html>
